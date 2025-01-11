@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    {
+      "task_number": 1,
+      "equation": "(((ax)^2 + b) * x )*c",
+      "variable_values": {
+        "a": 2,
+        "b": 5,
+        "c": -1,
+        "x": 3
+      }
+    },
+    {
+      "task_number": 2,
+      "equation": "3x + 2y",
+      "variable_values": {
+        "x": 2,
+        "y": 2
+      }
+    },
+    {
+      "task_number": 3,
+      "equation": "4a - 6b",
+      "variable_values": {
+        "a": 6,
+        "b": -3
+      }
+    }
+  ]
+}

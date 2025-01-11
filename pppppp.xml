@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tasks>
+  <task>
+    <task_number>1</task_number>
+    <result>52.0</result>
+  </task>
+  <task>
+    <task_number>2</task_number>
+    <result>10.0</result>
+  </task>
+  <task>
+    <task_number>3</task_number>
+    <result>42.0</result>
+  </task>
+  <task>
+    <task_number>4</task_number>
+    <result>0.0</result>
+  </task>
+</tasks>

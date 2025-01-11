@@ -1,0 +1,28 @@
+<tasks>
+    <task>
+        <task_number>1</task_number>
+        <equation>((ax)^2 + b) * x + c</equation>
+        <variable_values>
+            <a>2</a>
+            <b>5</b>
+            <c>1</c>
+            <x>3</x>
+        </variable_values>
+    </task>
+    <task>
+        <task_number>2</task_number>
+        <equation>3x + 2y</equation>
+        <variable_values>
+            <x>2</x>
+            <y>2</y>
+        </variable_values>
+    </task>
+    <task>
+        <task_number>3</task_number>
+        <equation>4a - 6b</equation>
+        <variable_values>
+            <a>6</a>
+            <b>-3</b>
+        </variable_values>
+    </task>
+</tasks>

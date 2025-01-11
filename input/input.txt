@@ -1,0 +1,23 @@
+Task 1
+ax^2 + bx + c
+a = 2
+b = 5
+c = 1
+x = 3
+y = 9
+Task 2
+3x + 2y
+x = 2
+y = 2
+Task 3
+4a - 6b
+a = 6
+b = -3
+Task 4
+a + b + c + d + e / f
+a = 7
+b = 5
+c = 1
+d = 10
+e = 11
+f = 0
