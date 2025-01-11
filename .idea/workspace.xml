@@ -5,23 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20865cbe-52c2-4527-ae03-434074ff685c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Archival.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Dearchivizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Decrypt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Encryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/FileReade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/FileWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Information.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/MainGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extracted_files_zip/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Содержание OneNote.onetoc2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MainGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MainGUI.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "E:/Java/Skvoznaya/src/main/java/com/example/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Java/Skvoznaya/Skvoznaya/lib/slf4j-api-1.7.36.jar&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Java/Skvoznaya/src/main/java/com/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,5 +74,28 @@
       <updated>1732702202221</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,19 +1,12 @@
 package com.example;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 
 public class MainGUI {
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(MainGUI::createAndShowGUI);
     }
@@ -21,30 +14,59 @@ public class MainGUI {
     private static void createAndShowGUI() {
         JFrame frame = new JFrame("File Processor");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
+        frame.setSize(300, 150); // Уменьшенный размер окна
 
-        JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10);
-        gbc.fill = GridBagConstraints.HORIZONTAL;
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        JLabel label = new JLabel("Choose Interface: Console or GUI", SwingConstants.CENTER);
+        label.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+        panel.add(label);
+
+        panel.add(Box.createVerticalStrut(15)); // Отступ между текстом и кнопками
+
+        JButton consoleButton = new JButton("Console");
+        consoleButton.setAlignmentX(JButton.CENTER_ALIGNMENT);
+
+        JButton guiButton = new JButton("GUI");
+        guiButton.setAlignmentX(JButton.CENTER_ALIGNMENT);
+
+        consoleButton.addActionListener(e -> {
+            frame.dispose();
+            Main.main(new String[0]);
+        });
+
+        guiButton.addActionListener(e -> {
+            frame.dispose();
+            showFileSelectionWindow();
+        });
+
+        panel.add(consoleButton);
+        panel.add(Box.createVerticalStrut(10)); // Отступ между кнопками
+        panel.add(guiButton);
+
+        frame.add(panel);
+        frame.setLocationRelativeTo(null); // Центрирование окна на экране
+        frame.setVisible(true);
+    }
+
+    private static void showFileSelectionWindow() {
+        JFrame frame = new JFrame("File Selection");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 500);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         JLabel fileLabel = new JLabel("Select a file:");
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        panel.add(fileLabel, gbc);
+        fileLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+        panel.add(fileLabel);
 
         JTextField filePathField = new JTextField(30);
         filePathField.setEditable(false);
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.gridwidth = 2;
-        panel.add(filePathField, gbc);
-
+        filePathField.setAlignmentX(JTextField.LEFT_ALIGNMENT);
         JButton fileButton = new JButton("Choose File");
-        gbc.gridx = 3;
-        gbc.gridy = 0;
-        gbc.gridwidth = 1;
-        panel.add(fileButton, gbc);
+        fileButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
 
         fileButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
@@ -55,90 +77,76 @@ public class MainGUI {
             }
         });
 
+        panel.add(fileButton);
+        panel.add(filePathField);
+
         JLabel encryptedLabel = new JLabel("Is the file encrypted?");
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        panel.add(encryptedLabel, gbc);
+        encryptedLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+        panel.add(encryptedLabel);
 
         JRadioButton yesButton = new JRadioButton("Yes");
+        yesButton.setAlignmentX(JRadioButton.LEFT_ALIGNMENT);
         JRadioButton noButton = new JRadioButton("No");
+        noButton.setAlignmentX(JRadioButton.LEFT_ALIGNMENT);
+
         ButtonGroup encryptionGroup = new ButtonGroup();
         encryptionGroup.add(yesButton);
         encryptionGroup.add(noButton);
 
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        panel.add(yesButton, gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 1;
-        panel.add(noButton, gbc);
+        panel.add(yesButton);
+        panel.add(noButton);
 
         JTextField keyField = new JTextField(20);
         keyField.setVisible(false);
+        keyField.setAlignmentX(JTextField.LEFT_ALIGNMENT);
         JLabel keyLabel = new JLabel("Enter decryption key:");
         keyLabel.setVisible(false);
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        panel.add(keyLabel, gbc);
+        keyLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
 
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.gridwidth = 3;
-        panel.add(keyField, gbc);
+        panel.add(keyLabel);
+        panel.add(keyField);
 
         yesButton.addActionListener(e -> {
             keyField.setVisible(true);
             keyLabel.setVisible(true);
         });
+
         noButton.addActionListener(e -> {
             keyField.setVisible(false);
             keyLabel.setVisible(false);
         });
 
         JLabel outputLabel = new JLabel("Enter output file name:");
-        gbc.gridx = 0;
-        gbc.gridy = 3;
-        gbc.gridwidth = 1;
-        panel.add(outputLabel, gbc);
+        outputLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+        JTextField outputFileField = new JTextField(20);
+        outputFileField.setAlignmentX(JTextField.LEFT_ALIGNMENT);
 
-        JTextField outputFileField = new JTextField(30);
-        gbc.gridx = 1;
-        gbc.gridy = 3;
-        gbc.gridwidth = 3;
-        panel.add(outputFileField, gbc);
+        panel.add(outputLabel);
+        panel.add(outputFileField);
 
         JLabel fileTypeLabel = new JLabel("Select output file type:");
-        gbc.gridx = 0;
-        gbc.gridy = 4;
-        panel.add(fileTypeLabel, gbc);
+        fileTypeLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+        panel.add(fileTypeLabel);
 
         String[] fileTypes = {"txt", "xml", "json"};
         JComboBox<String> fileTypeComboBox = new JComboBox<>(fileTypes);
-        gbc.gridx = 1;
-        gbc.gridy = 4;
-        gbc.gridwidth = 3;
-        panel.add(fileTypeComboBox, gbc);
+        fileTypeComboBox.setAlignmentX(JComboBox.LEFT_ALIGNMENT);
+        panel.add(fileTypeComboBox);
 
         JCheckBox archiveBox = new JCheckBox("Archive the result");
-        gbc.gridx = 0;
-        gbc.gridy = 5;
-        gbc.gridwidth = 2;
-        panel.add(archiveBox, gbc);
+        archiveBox.setAlignmentX(JCheckBox.LEFT_ALIGNMENT);
+        panel.add(archiveBox);
 
         JLabel archiveTypeLabel = new JLabel("Select archive type:");
         archiveTypeLabel.setVisible(false);
-        gbc.gridx = 0;
-        gbc.gridy = 6;
-        panel.add(archiveTypeLabel, gbc);
+        archiveTypeLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+        panel.add(archiveTypeLabel);
 
         String[] archiveTypes = {"zip", "jar"};
         JComboBox<String> archiveTypeComboBox = new JComboBox<>(archiveTypes);
         archiveTypeComboBox.setVisible(false);
-        gbc.gridx = 1;
-        gbc.gridy = 6;
-        gbc.gridwidth = 3;
-        panel.add(archiveTypeComboBox, gbc);
+        archiveTypeComboBox.setAlignmentX(JComboBox.LEFT_ALIGNMENT);
+        panel.add(archiveTypeComboBox);
 
         archiveBox.addActionListener(e -> {
             boolean isSelected = archiveBox.isSelected();
@@ -147,16 +155,12 @@ public class MainGUI {
         });
 
         JCheckBox encryptBox = new JCheckBox("Encrypt the result");
-        gbc.gridx = 0;
-        gbc.gridy = 7;
-        gbc.gridwidth = 2;
-        panel.add(encryptBox, gbc);
+        encryptBox.setAlignmentX(JCheckBox.LEFT_ALIGNMENT);
+        panel.add(encryptBox);
 
         JButton processButton = new JButton("Process");
-        gbc.gridx = 1;
-        gbc.gridy = 8;
-        gbc.gridwidth = 2;
-        panel.add(processButton, gbc);
+        processButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
+        panel.add(processButton);
 
         processButton.addActionListener(e -> {
             String filePath = filePathField.getText();
@@ -174,7 +178,6 @@ public class MainGUI {
             }
 
             try {
-                // Call your processing logic here
                 List<Information> results = new ArrayList<>();
                 if (isEncrypted) {
                     String decryptedFileName = "decrypted_input.txt";
@@ -182,24 +185,8 @@ public class MainGUI {
                     filePath = decryptedFileName;
                 }
 
-                if (filePath.endsWith(".zip") || filePath.endsWith(".jar")) {
-                    List<String> filesInArchive = listFilesInArchive(filePath);
-                    String selectedFile = (String) JOptionPane.showInputDialog(frame, "Select a file from the archive:",
-                            "File Selection", JOptionPane.PLAIN_MESSAGE, null,
-                            filesInArchive.toArray(), filesInArchive.get(0));
-
-                    if (selectedFile == null) {
-                        JOptionPane.showMessageDialog(frame, "No file selected from the archive.", "Error", JOptionPane.ERROR_MESSAGE);
-                        return;
-                    }
-
-                    String extractedFilePath = extractFileFromArchive(filePath, selectedFile);
-                    filePath = extractedFilePath;
-                }
-
                 Main.processFile(filePath, results);
 
-                // Save the results
                 switch (selectedFileType) {
                     case "txt":
                         FileWrite.writeToTxt(outputFileName + ".txt", results);
@@ -229,37 +216,7 @@ public class MainGUI {
         });
 
         frame.add(panel);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-    }
-
-    private static List<String> listFilesInArchive(String archivePath) throws IOException {
-        List<String> fileNames = new ArrayList<>();
-        try (ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(archivePath))) {
-            ZipEntry entry;
-            while ((entry = zipInputStream.getNextEntry()) != null) {
-                fileNames.add(entry.getName());
-            }
-        }
-        return fileNames;
-    }
-
-    private static String extractFileFromArchive(String archivePath, String fileName) throws IOException {
-        Path tempDir = Files.createTempDirectory("archive_extraction");
-        String extractedFilePath = null;
-        try (ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(archivePath))) {
-            ZipEntry entry;
-            while ((entry = zipInputStream.getNextEntry()) != null) {
-                if (entry.getName().equals(fileName)) {
-                    Path extractedFile = tempDir.resolve(fileName);
-                    Files.copy(zipInputStream, extractedFile, StandardCopyOption.REPLACE_EXISTING);
-                    extractedFilePath = extractedFile.toString();
-                    break;
-                }
-            }
-        }
-        if (extractedFilePath == null) {
-            throw new IOException("File not found in archive: " + fileName);
-        }
-        return extractedFilePath;
     }
 }
