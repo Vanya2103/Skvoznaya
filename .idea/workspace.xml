@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20865cbe-52c2-4527-ae03-434074ff685c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extracted_files_zip/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Содержание OneNote.onetoc2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Содержание OneNote.onetoc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/DecryptTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/EncryptorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/FileReadeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/InformationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MainGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -46,24 +36,131 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Java/Skvoznaya/Skvoznaya/lib/slf4j-api-1.7.36.jar&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Java/Skvoznaya/src/main/java/com/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MainGUI.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.DecryptTest.executor": "Run",
+    "JUnit.EncryptorTest.executor": "Run",
+    "JUnit.FileReadeTest.executor": "Run",
+    "JUnit.InformationTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Java/Skvoznaya/Skvoznaya",
+    "onboarding.tips.debug.path": "E:/Java/Skvoznaya/src/main/java/com/example/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.com.example in Skvoznaya">
+    <configuration name="DecryptTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Skvoznaya" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.DecryptTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncryptorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Skvoznaya" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.EncryptorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileReadeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Skvoznaya" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.FileReadeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InformationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Skvoznaya" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="MAIN_CLASS_NAME" value="com.example.InformationTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example in Skvoznaya" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Skvoznaya" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.com.example in Skvoznaya" />
+      <item itemvalue="JUnit.DecryptTest" />
+      <item itemvalue="JUnit.EncryptorTest" />
+      <item itemvalue="JUnit.FileReadeTest" />
+      <item itemvalue="JUnit.InformationTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.example in Skvoznaya" />
+        <item itemvalue="JUnit.InformationTest" />
+        <item itemvalue="JUnit.FileReadeTest" />
+        <item itemvalue="JUnit.DecryptTest" />
+        <item itemvalue="JUnit.EncryptorTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
